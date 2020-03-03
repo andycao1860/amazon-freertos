@@ -79,7 +79,7 @@ static void prvNetworkStateChangeCallback( uint32_t ulNetworkType,
 
 #define otaDemoCONN_RETRY_LIMIT           ( 100 )
 
-#define otaDemoKEEPALIVE_SECONDS          ( 1200 )
+#define otaDemoKEEPALIVE_SECONDS          ( 120 )
 
 #define myappONE_SECOND_DELAY_IN_TICKS    pdMS_TO_TICKS( 1000UL )
 
@@ -137,6 +137,7 @@ static void prvNetworkStateChangeCallback( uint32_t ulNetworkType,
         if( ( xNetworkConnected == pdTRUE ) && ( xConnection.ulNetworkType == ulNetworkType ) )
         {
             xNetworkConnected = pdFALSE;
+            configPRINTF( ( "-------Network state changed -- DISABLED \r\n" ) );
         }
     }
 }
@@ -146,6 +147,8 @@ static IotNetworkError_t prvNetworkDisconnectCallback( void * pvContext )
 {
     ( void ) pvContext;
     xNetworkConnected = pdFALSE;
+
+    configPRINTF( ( "=================MQTT disconnected...=====================\r\n" ) );
 
     return IOT_NETWORK_SUCCESS;
 }
