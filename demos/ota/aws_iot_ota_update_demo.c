@@ -79,7 +79,7 @@ static void prvNetworkStateChangeCallback( uint32_t ulNetworkType,
 
 #define otaDemoCONN_RETRY_LIMIT           ( 100 )
 
-#define otaDemoKEEPALIVE_SECONDS          ( 1200 )
+#define otaDemoKEEPALIVE_SECONDS          ( 120 )
 
 #define myappONE_SECOND_DELAY_IN_TICKS    pdMS_TO_TICKS( 1000UL )
 
