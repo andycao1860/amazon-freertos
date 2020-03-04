@@ -41,7 +41,7 @@
  *
  * 10 bits yields a data block size of 1KB.
  */
-#define otaconfigLOG2_FILE_BLOCK_SIZE           10UL
+#define otaconfigLOG2_FILE_BLOCK_SIZE           12UL
 
 /**
  * @brief Milliseconds to wait for the self test phase to succeed before we force reset.
@@ -101,7 +101,7 @@
  * This configurations parameter sets the maximum number of static data buffers used by
  * the OTA agent for job and file data blocks received.
  */
-#define otaconfigMAX_NUM_OTA_DATA_BUFFERS       8U
+#define otaconfigMAX_NUM_OTA_DATA_BUFFERS       4U
 
 /**
  * @brief The protocol selected for OTA control operations.
